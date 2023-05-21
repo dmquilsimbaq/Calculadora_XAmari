@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Calculadora.MainPage"
+             BackgroundColor="White">
+
+    <AbsoluteLayout>
+        <StackLayout AbsoluteLayout.LayoutBounds="0,0,1,.32" AbsoluteLayout.LayoutFlags="All">
+            <Frame BackgroundColor="#2196F3" Padding="15" CornerRadius="0">
+                <Label Text="Calculadora Básica" HorizontalTextAlignment="Center" TextColor="White" FontSize="10"/>
+            </Frame>
+            <Label Padding="8,0" HorizontalOptions="End">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <FormattedString.Spans>
+                            <Span x:Name="spnPrimero" Text="" FontSize="36" TextColor="Aqua"></Span>
+                            <Span x:Name="spnSegundo" Text="" FontSize="32" TextColor="Black"></Span>
+                            <Span x:Name="spntercero" Text="" FontSize="36" TextColor="Aqua"></Span>
+                        </FormattedString.Spans>
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+            <Label x:Name="lblNumro" HorizontalOptions="End" Text="0" TextColor="DarkSlateBlue" Margin="0,0,16,0" FontSize="80" FontAttributes="Bold"/>
+        </StackLayout>
+        <Frame AbsoluteLayout.LayoutBounds="0,1,1,.1" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional" />
+        <Frame AbsoluteLayout.LayoutBounds="0,1,1,.62" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional"  HasShadow="False" CornerRadius="45">
+            <Grid AbsoluteLayout.LayoutBounds="0,1,1,.62" AbsoluteLayout.LayoutFlags="SizeProportional,YProportional" RowDefinitions="*,*,*,*,*" ColumnDefinitions="*,*,*,*" Padding="10" RowSpacing="4" ColumnSpacing="4">
+                <Frame Grid.Column="0" Grid.Row="0" Padding="0,-8,0,0" Margin="10" CornerRadius="12">
+                    <Button TextColor="Aqua" FontSize="30" VerticalOptions="Fill" Text="+"  Clicked="Btn_sumar" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="0" Padding="6,-9,6,0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="30" VerticalOptions="Fill" Text="-"  Clicked="Btn_restar" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="0" Padding="3,-4,6,0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="x" TextTransform="None" Clicked="Btn_multiplicar"  BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="0" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="/"  TextTransform="None" Clicked="Btn_dividir"  BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="0" Grid.Row="1" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="7"  Clicked="ClickSiete" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="1" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="8"  Clicked="ClickOcho" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="1" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="9"  Clicked="ClickNueve" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="1" Grid.RowSpan="2" Padding="0" Margin="10" CornerRadius="12">
+                    <Button TextColor="Aqua" FontSize="40" VerticalOptions="Fill" Text="C"  Clicked="Btn_limpiar" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="0" Grid.Row="2" Padding="0" Margin="10" CornerRadius="12">
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="4"  Clicked="ClickCuatro" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="2" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="5"  Clicked="ClickCinco" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="2" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="6"  Clicked="ClickSeis" BackgroundColor="White"/>
+                </Frame>
+               
+                <Frame Grid.Column="0" Grid.Row="3" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="1"  Clicked="ClickUno" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="1" Grid.Row="3" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="2"  Clicked="ClickDos" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="3" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="3"  Clicked="ClickTres" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="3" Grid.Row="3" Grid.RowSpan="2" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="50" VerticalOptions="Fill" Text="="  Clicked="Btn_igual" BackgroundColor="BlanchedAlmond"/>
+                </Frame>
+                <Frame Grid.Column="0" Grid.Row="4" Grid.ColumnSpan="2" Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="0"  Clicked="ClickCero" BackgroundColor="White"/>
+                </Frame>
+                <Frame Grid.Column="2" Grid.Row="4"  Padding="0" Margin="10" CornerRadius="12" >
+                    <Button TextColor="Aqua" FontSize="24" VerticalOptions="Fill" Text="."  Clicked="ClickPunto" BackgroundColor="White"/>
+                </Frame>
+            </Grid>
+            
+        </Frame>
+    </AbsoluteLayout>
+</ContentPage>
